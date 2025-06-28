@@ -1,255 +1,70 @@
-Week 2 – Java Testing with JUnit & Mockito  
-Cognizant Digital Nurture 
+# Week 2 – Java Testing with JUnit & Mockito  
+**Cognizant Digital Nurture Internship**
 
-Overview  
----------
-This week focused on mastering the fundamentals of **unit testing in Java** using the popular frameworks **JUnit** and **Mockito**. The emphasis was on test-driven development (TDD), simulating real-world software testing scenarios, and writing maintainable, reliable code.
+## Overview  
+This week focused on strengthening the fundamentals of **unit testing** in Java using **JUnit** and **Mockito**. The primary goal was to understand how to test Java applications effectively using assertions, mocking, and structured test practices.
 
-The exercises covered setting up a testing environment, writing effective test cases, using assertions, mocking dependencies, and verifying method interactions. These concepts are essential in ensuring the correctness, reliability, and testability of enterprise-grade Java applications.
-
-Tools & Technologies  
----------------------
+## Tools and Technologies Used  
 - Java 22  
 - IntelliJ IDEA Community Edition 2025  
-- Maven (Project & Dependency Management)  
-- JUnit 4.13.2 (Unit Testing Framework)  
-- Mockito 5.7.0 (Mocking Framework)
-
-Key Learning Outcomes  
-----------------------
-- Setting up a Java project with Maven for testing
-- Writing unit tests using JUnit
-- Using assertions to validate logic
-- Structuring test cases with the Arrange-Act-Assert pattern
-- Using `@Before` and `@After` annotations for setup and teardown
-- Mocking external dependencies with Mockito
-- Verifying interactions using `verify()` method
-
-Project Structure  
-------------------
-```
-
-project-root/
-├── pom.xml
-├── src/
-│   ├── main/java/org/example/
-│   │   └── Calculator.java
-│   │   └── ExternalApi.java
-│   │   └── MyService.java
-│   └── test/java/org/example/
-│       └── CalculatorTest.java
-│       └── AssertionsTest.java
-│       └── MyServiceTest.java
-
-````
-
-How to Run Tests  
------------------
-**From IntelliJ IDEA**  
-1. Right-click the test class  
-2. Select "Run" to execute unit tests  
-3. View results in the test output window  
-
-**Using Maven CLI**  
-```bash
-mvn clean test
-````
-
-## Summary of Exercises
-
-**Exercise 1: JUnit Setup**
-
-* Configured Maven project
-* Verified basic test case execution
-
-**Exercise 2: JUnit Assertions**
-
-* Used `assertEquals`, `assertTrue`, `assertFalse`, `assertNull`, `assertNotNull`
-* Checked logical correctness
-
-**Exercise 3: AAA Pattern & Setup/Teardown**
-
-* Applied Arrange-Act-Assert pattern
-* Added `@Before` and `@After` methods for clean test setup
-
-**Exercise 4: Mockito Mocking & Verification**
-
-* Simulated external dependencies
-* Stubbed method outputs
-* Verified interaction using `verify()`
-
-## Expected Output
-
-```
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
-BUILD SUCCESS
-```
-
-## Conclusion
-
-This week established a strong foundation for writing unit-tested Java applications. The practical application of **JUnit for logic validation** and **Mockito for interaction-based testing** demonstrates real-world techniques used in professional software development. The skills acquired will contribute to building clean, testable, and scalable applications in future modules.
-
-```
-
-Would you like this exported to `.docx`, `.pdf`, or need an animated GitHub-style badge version?
-```
-
-
-Here’s your **complete Week 2 README** in both **Markdown** and **HTML** format. This includes an overview of tools, exercises, commands, project structure, and key outcomes — styled clearly for either GitHub or web display.
-
----
-
-### ✅ MARKDOWN (`README.md`) VERSION:
-
-```markdown
-Week 2 – Java Testing with JUnit & Mockito  
-Cognizant Digital Nurture Internship
-
-Overview  
----------
-This week focused on mastering the fundamentals of **unit testing in Java** using the popular frameworks **JUnit** and **Mockito**. The emphasis was on test-driven development (TDD), simulating real-world software testing scenarios, and writing maintainable, reliable code.
-
-Tools & Technologies  
----------------------
-- Java 22  
-- IntelliJ IDEA Community Edition 2025  
-- Maven  
+- Apache Maven  
 - JUnit 4.13.2  
 - Mockito 5.7.0  
 
-Key Learning Outcomes  
-----------------------
-- Set up JUnit with Maven  
-- Wrote unit tests using `assertEquals`, `assertTrue`, etc.  
-- Structured tests using the Arrange-Act-Assert (AAA) pattern  
-- Used `@Before` and `@After` to manage test setup/cleanup  
-- Created mock objects with Mockito  
-- Verified interactions using `verify()`
+## Key Learnings  
 
-Project Structure  
-------------------
-```
+### JUnit  
+- Writing basic test cases with `@Test` annotation  
+- Using assertion methods like `assertEquals`, `assertTrue`, `assertFalse`, `assertNull`, and `assertNotNull`  
+- Implementing setup and teardown methods using `@Before` and `@After`  
+- Understanding the Arrange-Act-Assert (AAA) pattern  
 
-project-root/
+### Mockito  
+- Creating mock objects using `Mockito.mock()`  
+- Stubbing method responses with `when(...).thenReturn(...)`  
+- Verifying method calls using `verify()`  
+- Isolating external dependencies during testing  
+
+### Testing Design Patterns  
+- Applying the Arrange-Act-Assert pattern for clarity  
+- Ensuring test cases are modular, independent, and repeatable  
+- Handling exceptions and validating error scenarios  
+
+## Project Structure  
+
+
+calculator/
 ├── pom.xml
 ├── src/
 │   ├── main/java/org/example/
-│   │   └── Calculator.java
-│   │   └── ExternalApi.java
+│   │   ├── Calculator.java
+│   │   ├── ExternalApi.java
 │   │   └── MyService.java
 │   └── test/java/org/example/
-│       └── CalculatorTest.java
-│       └── AssertionsTest.java
+│       ├── CalculatorTest.java
+│       ├── AssertionsTest.java
 │       └── MyServiceTest.java
 
-````
 
-How to Run Tests  
------------------
-**IntelliJ IDEA:**  
-Right-click the test class → Run
+## How to Run Tests
 
-**Maven CLI:**  
+### Using IntelliJ IDEA  
+- Open the project  
+- Right-click on any test class (e.g., `CalculatorTest.java`)  
+- Select **Run** to execute tests  
+
+### Using Maven CLI  
+Run the following command inside the project directory:  
 ```bash
 mvn clean test
-````
 
-## Expected Output
+## Sample Test Output
 
-```
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
-```
+
 
 ## Conclusion
 
-This week’s module built confidence in writing and structuring unit tests in Java using modern testing tools. The use of Mockito to mock services and JUnit to validate results promotes better software practices in professional development environments.
+This week provided a solid understanding of writing and organizing test cases in Java. It introduced best practices for test-driven development and ensured that code is reliable and maintainable. Mastering unit testing with JUnit and Mockito is essential for any Java developer aiming to build production-ready applications.
 
-`
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Week 2 - Java Testing README</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 30px; background: #f9f9f9; color: #333; }
-    h1, h2 { color: #2c3e50; }
-    code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
-    pre { background: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 5px; overflow: auto; }
-    ul { list-style-type: square; }
-    .section { margin-bottom: 30px; }
-  </style>
-</head>
-<body>
-
-  <h1>Week 2 – Java Testing with JUnit & Mockito</h1>
-  <h3>Cognizant Digital Nurture Internship</h3>
-
-  <div class="section">
-    <h2>Overview</h2>
-    <p>This week focused on mastering the fundamentals of <strong>unit testing in Java</strong> using the popular frameworks <strong>JUnit</strong> and <strong>Mockito</strong>. The emphasis was on test-driven development (TDD), simulating real-world software testing scenarios, and writing maintainable, reliable code.</p>
-  </div>
-
-  <div class="section">
-    <h2>Tools & Technologies</h2>
-    <ul>
-      <li>Java 22</li>
-      <li>IntelliJ IDEA Community Edition 2025</li>
-      <li>Maven</li>
-      <li>JUnit 4.13.2</li>
-      <li>Mockito 5.7.0</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Key Learning Outcomes</h2>
-    <ul>
-      <li>Set up JUnit with Maven</li>
-      <li>Wrote unit tests using assertions</li>
-      <li>Applied Arrange-Act-Assert (AAA) test pattern</li>
-      <li>Used <code>@Before</code> and <code>@After</code> for setup and teardown</li>
-      <li>Mocked dependencies with Mockito</li>
-      <li>Verified service interaction using <code>verify()</code></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Project Structure</h2>
-    <pre>
-project-root/
-├── pom.xml
-├── src/
-│   ├── main/java/org/example/
-│   │   └── Calculator.java
-│   │   └── ExternalApi.java
-│   │   └── MyService.java
-│   └── test/java/org/example/
-│       └── CalculatorTest.java
-│       └── AssertionsTest.java
-│       └── MyServiceTest.java
-    </pre>
-  </div>
-
-  <div class="section">
-    <h2>How to Run Tests</h2>
-    <p><strong>In IntelliJ IDEA:</strong> Right-click the test class and choose <em>Run</em></p>
-    <p><strong>In Maven CLI:</strong></p>
-    <pre>mvn clean test</pre>
-  </div>
-
-  <div class="section">
-    <h2>Expected Output</h2>
-    <pre>
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
-BUILD SUCCESS
-    </pre>
-  </div>
-
-  <div class="section">
-    <h2>Conclusion</h2>
-    <p>This week’s module built confidence in writing and structuring unit tests in Java using modern testing tools. The use of Mockito to mock services and JUnit to validate results promotes better software practices in professional development environments.</p>
-  </div>
-
-</body>
-</html>
