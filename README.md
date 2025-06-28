@@ -5,4 +5,5 @@ Hands-on coding projects for learning and practicing Design Patterns in Java. Co
 Handson Excersie:
 
 Week 1
+
 Week 2
